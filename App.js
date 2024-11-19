@@ -12,13 +12,17 @@ import PressableButton from "./PressableButton";
 import LongPressExample from "./LongPressExample";
 import DynamicList from "./dynamicList";
 import TextInputExample from "./inputText";
+import SectionListExample from "./SectionListExample";
+import FlatListExample from "./FlatListExample";
 
 const logoImg = require("./assets/adaptive-icon.png");
 
 export default function App() {
   return (
     <SafeAreaView style={styles.mainContainer}>
-       <TextInputExample/>
+      {/* <SectionListExample/> */}
+      <FlatListExample/>
+       {/* <TextInputExample/> */}
 
       {/* <ScrollView> */}
       {/* <PressableButton/> */}
