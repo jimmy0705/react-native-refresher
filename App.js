@@ -1,4 +1,7 @@
-import { View, Text, Image, ImageBackground, ScrollView } from "react-native";
+import { View, Text, Image, ImageBackground, ScrollView, Button } from "react-native";
+import PressableButton from "./PressableButton";
+import LongPressExample from "./LongPressExample";
+import DynamicList from "./dynamicList";
 const logoImg = require("./assets/adaptive-icon.png");
 
 export default function App() {
@@ -11,17 +14,16 @@ export default function App() {
       }}
     >
       <ScrollView>
-        {/* <Text style={{fontSize: 20, fontWeight: 'bold'}}><Text style={{color:'yellow'}}>Hello</Text> World</Text> */}
-        {/* <View style={{width: 200, height: 200, backgroundColor: 'lightblue'}}></View> */}
-        <Image source={logoImg} style={{ width: 200, height: 200 }} />
+        {/* <PressableButton/> */}
+        <LongPressExample/>
+        <DynamicList/>
+      {/* <Button title="Normal Button :)" onPress={() =>console.log('hello :)')} color="midnightblue"  disabled={false}/> */}
+
+        {/* <Image source={logoImg} style={{ width: 200, height: 200 }} />
         <Image
           source={{ uri: "https://picsum.photos/200" }}
           style={{ width: 200, height: 200 }}
         />
-        {/* <ImageBackground source={logoImg} style={{flex:1}}>
-        {" "}
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>World</Text>
-      </ImageBackground> */}
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -44,7 +46,7 @@ export default function App() {
           fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
           sunt in culpa qui officia deserunt mollit anim id est laborum.
         </Text>
-        <Image source={logoImg} style={{ width: 200, height: 200 }} />
+        <Image source={logoImg} style={{ width: 200, height: 200 }} /> */}
       </ScrollView>
     </View>
   );
