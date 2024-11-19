@@ -1,25 +1,32 @@
-import { View, Text, Image, ImageBackground, ScrollView, Button } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ImageBackground,
+  ScrollView,
+  Button,
+  SafeAreaView,
+  StyleSheet,
+} from "react-native";
 import PressableButton from "./PressableButton";
 import LongPressExample from "./LongPressExample";
 import DynamicList from "./dynamicList";
+import TextInputExample from "./inputText";
+
 const logoImg = require("./assets/adaptive-icon.png");
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        padding: 60,
-        backgroundColor: "yellow",
-      }}
-    >
-      <ScrollView>
-        {/* <PressableButton/> */}
-        <LongPressExample/>
-        <DynamicList/>
+    <SafeAreaView style={styles.mainContainer}>
+       <TextInputExample/>
+
+      {/* <ScrollView> */}
+      {/* <PressableButton/> */}
+      {/* <LongPressExample />
+      <DynamicList /> */}
       {/* <Button title="Normal Button :)" onPress={() =>console.log('hello :)')} color="midnightblue"  disabled={false}/> */}
 
-        {/* <Image source={logoImg} style={{ width: 200, height: 200 }} />
+      {/* <Image source={logoImg} style={{ width: 200, height: 200 }} />
         <Image
           source={{ uri: "https://picsum.photos/200" }}
           style={{ width: 200, height: 200 }}
@@ -47,7 +54,17 @@ export default function App() {
           sunt in culpa qui officia deserunt mollit anim id est laborum.
         </Text>
         <Image source={logoImg} style={{ width: 200, height: 200 }} /> */}
-      </ScrollView>
-    </View>
+      {/* </ScrollView> */}
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    // alignContent: "center",
+    // alignItems: "center",
+    paddingTop: 60,
+    backgroundColor: "yellow",
+  },
+});
