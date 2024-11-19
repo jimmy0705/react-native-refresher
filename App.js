@@ -14,14 +14,19 @@ import DynamicList from "./dynamicList";
 import TextInputExample from "./inputText";
 import SectionListExample from "./SectionListExample";
 import FlatListExample from "./FlatListExample";
+import RefreshControlExample from "./RefreshControlExample";
 
 const logoImg = require("./assets/adaptive-icon.png");
 
 export default function App() {
   return (
     <SafeAreaView style={styles.mainContainer}>
+      <RefreshControlExample/>
+
+
+
       {/* <SectionListExample/> */}
-      <FlatListExample/>
+      {/* <FlatListExample/> */}
        {/* <TextInputExample/> */}
 
       {/* <ScrollView> */}
